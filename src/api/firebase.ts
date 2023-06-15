@@ -1,27 +1,6 @@
-// // src/api/firebase.ts
-// // eslint-disable-next-line import/no-extraneous-dependencies
-// import { initializeApp } from 'firebase/app';
-// // eslint-disable-next-line import/no-extraneous-dependencies
-// import { getAuth } from 'firebase/auth';
-
-// const firebaseConfig = {
-//     apiKey: 'AIzaSyAkF7R_Cd6oYOZio9ef3l-zkvpIQ5AHbEM',
-//     authDomain: 'ts-firebase-22cfe.firebaseapp.com',
-//     projectId: 'ts-firebase-22cfe',
-//     storageBucket: 'ts-firebase-22cfe.appspot.com',
-//     messagingSenderId: '579599409275',
-//     appId: '1:579599409275:web:1bc949f17a8c82689602de',
-// };
-
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(app);
-
-// export { app, auth };
-// src/api/firebase.ts
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { initializeApp } from 'firebase/app';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -34,8 +13,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-export { app, auth };
+export { app, auth, db };
 
 // authDomain: 'ts-firebase-ff4d3.firebaseapp.com',
 // projectId: 'ts-firebase-ff4d3',

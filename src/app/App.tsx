@@ -61,6 +61,7 @@ import AuthContext from '../contexts/AuthContext';
 import { auth } from '../api/firebase';
 import Login from '../components/Login/Login';
 import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute';
+import Todos from '../components/Todos/Todos';
 
 function App(): JSX.Element {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
@@ -77,6 +78,7 @@ function App(): JSX.Element {
         <Route path="/" element={<ProtectedRoute outlet={<Profile />} />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
+        <Route path="todos" element={<Todos />} />
       </Routes>
     </AuthContext.Provider>
   );
