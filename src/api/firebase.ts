@@ -16,9 +16,3 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 export { app, auth, db };
-
-// authDomain: 'ts-firebase-ff4d3.firebaseapp.com',
-// projectId: 'ts-firebase-ff4d3',
-// storageBucket: 'ts-firebase-ff4d3.appspot.com',
-// messagingSenderId: '422520342709',
-// appId: '1:422520342709:web:d4f688895cc2c2cd5696fc'
